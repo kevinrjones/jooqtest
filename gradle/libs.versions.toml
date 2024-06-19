@@ -1,0 +1,30 @@
+[versions]
+compose-plugin = "1.6.10"
+junit = "4.13.2"
+kotlin = "2.0.0"
+sqLiteVersion = "3.45.3.0"
+logback_version = "1.5.6"
+jooq_version = "3.19.10"
+
+
+[libraries]
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+sqlite = { module = "org.xerial:sqlite-jdbc", version.ref = "sqLiteVersion" }
+logback = { module = "ch.qos.logback:logback-classic", version.ref = "logback_version" }
+jooq-codeGen = { module = "org.jooq:jooq-codegen", version.ref = "jooq_version" }
+
+
+
+[plugins]
+jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+jooq = { id = "org.jooq.jooq-codegen-gradle", version.ref = "jooq_version" }
+
+#kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin_version" }
+#ksp = { id = "com.google.devtools.ksp", version.ref = "ksp_version" }
+#catalogUpdate = { id = "nl.littlerobots.version-catalog-update", version.ref = "catalogUpdateVersion_version" }
+#versionUpdate = { id = "com.github.ben-manes.versions", version.ref = "updateVersion_version" }
+
